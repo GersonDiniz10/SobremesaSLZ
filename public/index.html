@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="root">
+        <h1><img src="sob.png" alt="SobremesaSLZ" width="239" height="239"></h1>
+
+        <div class="content">
+
+            <form id="add-doce-form">
+                <input type="text" name="nome" placeholder="Nome">
+                <input type="text" name="sabor" placeholder="Sabor">
+                <input type="int" name="desc" placeholder="Descrição">
+                <input type="text" name="preco" placeholder="Preço">
+                <button>Add Produto</button>
+            </form>
+
+            <ul id="doce-list"></ul>
+
+        </div>
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyCpsYwsxaK5BGzS_9N70buTR2DYwFbZ5w0",
+                authDomain: "skilful-card-258518.firebaseapp.com",
+                databaseURL: "https://skilful-card-258518.firebaseio.com",
+                projectId: "skilful-card-258518",
+                storageBucket: "skilful-card-258518.appspot.com",
+                messagingSenderId: "962409123914",
+                appId: "1:962409123914:web:89d2fa50bcb5f0f59096b3",
+                measurementId: "G-YV011JMCLY"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            db.settings({timestampsInSnapshots: true});
+            firebase.analytics();
+            window.firebase = firebase;
+        </script>
+        <script src="app.js"></script>
+    </div>
+    </body>
+</html>
